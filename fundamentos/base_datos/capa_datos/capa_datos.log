@@ -1,0 +1,67 @@
+WARNING:root:mensaje a nivel warning
+INFO:root:mensaje a nivel info
+DEBUG:root:mensaje a nivel debug
+2020-05-07 21:05:05,247
+2020-05-07 21:05:05,247
+2020-05-07 21:05:05,247
+2020-05-07 21:06:44,733: WARNING [logger_base.py]
+2020-05-07 21:06:44,733: INFO [logger_base.py]
+2020-05-07 21:06:44,734: DEBUG [logger_base.py]
+2020-05-07 21:07:24,337: WARNING [logger_base.py: 12]
+2020-05-07 21:07:24,337: INFO [logger_base.py: 13]
+2020-05-07 21:07:24,337: DEBUG [logger_base.py: 14]
+2020-05-07 21:08:08,664: WARNING [logger_base.py: 12] mensaje a nivel warning
+2020-05-07 21:08:08,664: INFO [logger_base.py: 13] mensaje a nivel info
+2020-05-07 21:08:08,665: DEBUG [logger_base.py: 14] mensaje a nivel debug
+09:10:01 $p: WARNING [logger_base.py: 13] mensaje a nivel warning
+09:10:01 $p: INFO [logger_base.py: 14] mensaje a nivel info
+09:10:01 $p: DEBUG [logger_base.py: 15] mensaje a nivel debug
+09:10:11 PM: WARNING [logger_base.py: 13] mensaje a nivel warning
+09:10:11 PM: INFO [logger_base.py: 14] mensaje a nivel info
+09:10:11 PM: DEBUG [logger_base.py: 15] mensaje a nivel debug
+09:13:44 PM: INFO [conexion.py: 3] desde conexion
+07:08:55 PM: DEBUG [persona.py: 22] Id Persona: 1, Nombre: Juan, Apellido: Pérez, Email: email
+07:11:37 PM: DEBUG [persona.py: 22] Id Persona: 1, Nombre: Juan, Apellido: Pérez, Email: email
+07:11:37 PM: DEBUG [persona.py: 25] Id Persona: None, Nombre: Karla, Apellido: Gómez, Email: kgomez@email.com
+07:14:10 PM: DEBUG [persona.py: 22] Id Persona: 1, Nombre: Juan, Apellido: Pérez, Email: email
+07:14:10 PM: DEBUG [persona.py: 25] Id Persona: None, Nombre: Karla, Apellido: Gómez, Email: kgomez@email.com
+07:14:10 PM: DEBUG [persona.py: 29] Id Persona: 3, Nombre: None, Apellido: None, Email: None
+07:28:39 PM: DEBUG [conexion.py: 24] Conexion exitosa: <connection object at 0x03C8E910; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+07:28:39 PM: DEBUG [conexion.py: 38] Se abrió el cursor con éxito: <cursor object at 0x03C87928; closed: 0>
+07:28:39 PM: DEBUG [persona_dao.py: 14] b'SELECT * FROM persona ORDER BY id_persona'
+07:28:39 PM: DEBUG [persona_dao.py: 27] Id Persona: 1, Nombre: Juan, Apellido: Pérez, Email: jperez@mail.com
+09:29:55 PM: DEBUG [conexion.py: 24] Conexion exitosa: <connection object at 0x032BF910; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:29:55 PM: DEBUG [conexion.py: 38] Se abrió el cursor con éxito: <cursor object at 0x032B8928; closed: 0>
+09:29:55 PM: DEBUG [persona_dao.py: 30] b'INSERT INTO persona(nombre, apelliddo, email) VALUES(%s,%s,%s)'
+09:29:55 PM: DEBUG [persona_dao.py: 31] Persona a insertar: Id Persona: None, Nombre: Pedro, Apellido: Najera, Email: pnajera@email.com
+09:29:55 PM: ERROR [persona_dao.py: 38] Excepción al insertar persona: no existe la columna «apelliddo» en la relación «persona»
+LINE 1: INSERT INTO persona(nombre, apelliddo, email) VALUES('Pedro'...
+                                    ^
+
+09:29:55 PM: DEBUG [conexion.py: 58] Se han cerrado los objetos de conexion y cursor
+09:29:55 PM: DEBUG [persona_dao.py: 51] Personas insertadas: None
+09:30:26 PM: DEBUG [conexion.py: 24] Conexion exitosa: <connection object at 0x0373F910; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:30:26 PM: DEBUG [conexion.py: 38] Se abrió el cursor con éxito: <cursor object at 0x03738928; closed: 0>
+09:30:26 PM: DEBUG [persona_dao.py: 30] b'INSERT INTO persona(nombre, apellido, email) VALUES(%s,%s,%s)'
+09:30:26 PM: DEBUG [persona_dao.py: 31] Persona a insertar: Id Persona: None, Nombre: Pedro, Apellido: Najera, Email: pnajera@email.com
+09:30:26 PM: DEBUG [conexion.py: 58] Se han cerrado los objetos de conexion y cursor
+09:30:26 PM: DEBUG [persona_dao.py: 51] Personas insertadas: 1
+10:50:47 AM: DEBUG [conexion.py: 24] Conexion exitosa: <connection object at 0x03AFE910; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+10:50:47 AM: DEBUG [conexion.py: 38] Se abrió el cursor con éxito: <cursor object at 0x03AF8928; closed: 0>
+10:50:47 AM: DEBUG [persona_dao.py: 48] b'update PERSONA SET nombre=%s, apellido=%s, email=%s WHERE id_persona=%s'
+10:50:47 AM: DEBUG [persona_dao.py: 49] Persona a actualizar: Id Persona: 1, Nombre: Juan, Apellido: Pérez2, Email: jperez3@mail.com
+10:50:47 AM: DEBUG [conexion.py: 58] Se han cerrado los objetos de conexion y cursor
+10:50:47 AM: DEBUG [persona_dao.py: 91] Personas actualizadas: 1
+10:53:51 AM: DEBUG [conexion.py: 24] Conexion exitosa: <connection object at 0x02EFE910; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+10:53:51 AM: DEBUG [conexion.py: 38] Se abrió el cursor con éxito: <cursor object at 0x02EF8928; closed: 0>
+10:53:51 AM: DEBUG [persona_dao.py: 65] b'DELETE FROM persona WHERE id_persona = %s'
+10:53:51 AM: DEBUG [persona_dao.py: 66] Persona a insertar: Id Persona: 9, Nombre: None, Apellido: None, Email: None
+10:53:51 AM: ERROR [persona_dao.py: 73] Excepción al eliminar persona: 'int' object does not support indexing
+10:53:51 AM: DEBUG [conexion.py: 58] Se han cerrado los objetos de conexion y cursor
+10:53:51 AM: DEBUG [persona_dao.py: 96] Personas elimiadas: None
+10:55:44 AM: DEBUG [conexion.py: 24] Conexion exitosa: <connection object at 0x031EE910; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+10:55:44 AM: DEBUG [conexion.py: 38] Se abrió el cursor con éxito: <cursor object at 0x031E8928; closed: 0>
+10:55:44 AM: DEBUG [persona_dao.py: 65] b'DELETE FROM persona WHERE id_persona = %s'
+10:55:44 AM: DEBUG [persona_dao.py: 66] Persona a eliminar: Id Persona: 9, Nombre: None, Apellido: None, Email: None
+10:55:44 AM: DEBUG [conexion.py: 58] Se han cerrado los objetos de conexion y cursor
+10:55:44 AM: DEBUG [persona_dao.py: 96] Personas elimiadas: 1
